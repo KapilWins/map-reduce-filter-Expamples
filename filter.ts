@@ -1,69 +1,43 @@
-import { data } from "./dummyDB";
-
 //.filter()
-// to get all smartphones stored on one array named smartPhones
-/**
- * In this i am using filter to get category with smartPhones using .filter()
- * "item" is using for for object in array but one object is gets in "item" for one time
- */
+const pilots = [
+  {
+    id: 2,
+    name: "Wedge Antilles",
+    faction: "Rebels",
+  },
+  {
+    id: 8,
+    name: "Ciena Ree",
+    faction: "Empire",
+  },
+  {
+    id: 40,
+    name: "Iden Versio",
+    faction: "Empire",
+  },
+  {
+    id: 66,
+    name: "Thane Kyrell",
+    faction: "Rebels",
+  },
+];
+
+//if you have an array, but only want some of the elements in it, then we use filter
+
 //syntex ====> array.filter(function(value, index, arr), thisValue)
 //value - Required, the current element that needs to be filtered
-let smartphones = data.filter((item) => item.category == "smartphones");
-console.log("smartPhones =====>", smartphones);
-/**smartPhones =====> [
-    {
-      id: 1,
-      title: 'iPhone 9',
-      description: 'An apple mobile which is nothing like apple',
-      price: 549,
-      discountPercentage: 12.96,
-      rating: 4.69,
-      stock: 94,
-      brand: 'Apple',
-      category: 'smartphones'
-    },
-    {
-      id: 2,
-      title: 'iPhone X',
-      description: 'SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...',
-      price: 899,
-      discountPercentage: 17.94,
-      rating: 4.44,
-      stock: 34,
-      brand: 'Apple',
-      category: 'smartphones'
-    },
-    {
-      id: 3,
-      title: 'Samsung Universe 9',
-      description: "Samsung's new variant which goes beyond Galaxy to the Universe",
-      price: 1249,
-      discountPercentage: 15.46,
-      rating: 4.09,
-      stock: 36,
-      brand: 'Samsung',
-      category: 'smartphones'
-    },
-    {
-      id: 4,
-      title: 'OPPOF19',
-      description: 'OPPO F19 is officially announced on April 2021.',
-      price: 280,
-      discountPercentage: 17.91,
-      rating: 4.3,
-      stock: 123,
-      brand: 'OPPO',
-      category: 'smartphones'
-    },
-    {
-      id: 5,
-      title: 'Huawei P30',
-      description: 'Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.',
-      price: 499,
-      discountPercentage: 10.58,
-      rating: 4.09,
-      stock: 32,
-      brand: 'Huawei',
-      category: 'smartphones'
-    }
-  ]*/
+
+//Basically, if the callback function returns true, the current element will be in the resulting array. If it returns false, it won’t be.
+
+// we want array in which pilots's faction is Rebels
+const rebels = pilots.filter((pilot) => pilot.faction === "Rebels");
+console.log("Rebels =====>", rebels); /*Rebels =====> [
+  { id: 2, name: 'Wedge Antilles', faction: 'Rebels' },
+  { id: 66, name: 'Thane Kyrell', faction: 'Rebels' }
+]*/
+
+const empire = pilots.filter((pilot) => pilot.faction === "Empire");
+console.log("Empire ====>", empire); /*Empire ====> [
+  { id: 8, name: 'Ciena Ree', faction: 'Empire' },
+  { id: 40, name: 'Iden Versio', faction: 'Empire' }
+]*/
