@@ -1,6 +1,7 @@
 //map()
 
-/**syntex=====> .map(function(currentValue,index,array),thisArg);
+/**
+ * syntex=====> .map(function(currentValue,index,array),thisArg);
  * function- Required.A function to be run for each array element.
  * currentValue- Required. The value of the current element.
  * index- Optional. The index of the current element.

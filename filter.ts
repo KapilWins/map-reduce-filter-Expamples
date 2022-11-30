@@ -24,8 +24,16 @@ const pilots = [
 
 //if you have an array, but only want some of the elements in it, then we use filter
 
-//syntex ====> array.filter(function(value, index, arr), thisValue)
-//value - Required, the current element that needs to be filtered
+/**
+ * syntex ====> array.filter(function(value, index, arr), thisValue)
+ * function- Required. A function to run for each array element.
+ * value- Required, the current element that needs to be filtered
+ * index- 	Optional. The index of the current element.
+ * arr- Optional. The array of the current element.
+ * thisValue- Default undefined. A value passed to the function as its this value.
+ */
+
+// return value- Containing the elements that pass the test. If no elements pass the test it returns an empty array.
 
 //Basically, if the callback function returns true, the current element will be in the resulting array. If it returns false, it won’t be.
 
